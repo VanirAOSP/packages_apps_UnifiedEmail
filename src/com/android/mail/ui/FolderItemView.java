@@ -171,7 +171,7 @@ public class FolderItemView extends RelativeLayout {
      */
     public final void overrideUnreadCount(int count) {
         LogUtils.e(LOG_TAG, "FLF->FolderItem.getFolderView: unread count mismatch found (%s vs %d)",
-                mUnreadCountTextView.getText(), count);
+                mFolder.unreadCount, count);
         setUnreadCount(count);
     }
 
