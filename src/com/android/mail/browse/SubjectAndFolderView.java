@@ -62,7 +62,7 @@ public class SubjectAndFolderView extends TextView
 
     private ConversationFolderDisplayer mFolderDisplayer;
 
-    private String mSubject;
+    private String mSubject = "";
 
     private boolean mVisibleFolders;
 
