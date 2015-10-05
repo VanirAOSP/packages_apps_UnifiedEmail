@@ -505,10 +505,6 @@ public class Account implements Parcelable {
                 cursor.getColumnIndex(AccountColumns.ENABLE_MESSAGE_TRANSFORMS));
         syncAuthority = cursor.getString(
                 cursor.getColumnIndex(AccountColumns.SYNC_AUTHORITY));
-        if (TextUtils.isEmpty(syncAuthority)) {
-            // NOTE: this is actually expected in Email for the "combined view" account only
-            LogUtils.e(LOG_TAG, "Unexpected empty syncAuthority from cursor");
-        }
         quickResponseUri = Utils.getValidUri(cursor.getString(
                 cursor.getColumnIndex(AccountColumns.QUICK_RESPONSE_URI)));
         settingsFragmentClass = cursor.getString(cursor.getColumnIndex(
