@@ -1535,9 +1535,7 @@ public class NotificationUtils {
         final TextAppearanceSpan notificationSubjectSpan = new TextAppearanceSpan(
                 context, R.style.NotificationPrimaryText);
 
-        String snippet = getMessageBodyWithoutElidedText(message);
-        // Remove email signatures
-        snippet = !TextUtils.isEmpty(snippet) ? snippet.replaceAll("(?ms)^-- .*", "") : "";
+        final String snippet = getMessageBodyWithoutElidedText(message);
 
         // Change multiple newlines (with potential white space between), into a single new line
         final String collapsedSnippet =
